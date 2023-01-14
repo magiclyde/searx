@@ -1,0 +1,15 @@
+# /lib/systemd/system/searx.service
+[Unit]
+Description=searx
+Documentation=https://searx.github.io/searx/
+After=network.target
+Wants=network.target
+
+[Service]
+User=clyde
+WorkingDirectory=/path/to/searx-src
+ExecStart=/usr/bin/make -f ctl.makefile start
+ExecStop=/usr/bin/make -f ctl.makefile stop
+
+[Install]
+WantedBy=multi-user.target

@@ -28,3 +28,8 @@ gh-pages/
 searx.egg-info/
 .env
 geckodriver.log
+
+.idea/
+runtime.log
+settings.yml
+searx-pyenv/
